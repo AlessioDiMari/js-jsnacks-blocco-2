@@ -7,7 +7,7 @@ fino a quando ne avrà tanti quanti l’altro.
 // Salvo i fue bottoni
 const createBtn = document.getElementById("crea");
 
-const insertBtn = document.getElementById("inserisci");
+const verifyBtn = document.getElementById("verifica");
 
 
 
@@ -39,7 +39,23 @@ function(){
         secondArray.push(elementSecond);
     }
 
-    
+    // Al "click" del button "verifica", verifico la differenza di lunchezze 
+    // dei due array e faccio inserire all'utente gli elementi mancanti
+    //  all'array più piccolo utilizzando un while
+
+    while ( firstLenght !== secondLenght ){
+
+        if ( firstLenght < secondLenght ){
+            let elementFirst = prompt("Inserisci un elemento per il primo array");
+            firstArray.push(elementFirst);
+        } else {
+            let elementSecond = prompt("Inserisci un elemento per il secondo array");
+            secondArray.push(elementSecond);
+        }
+
+    }
+
+    // Dichiaro in pagina che gli array sono uguali
 
 }
 
