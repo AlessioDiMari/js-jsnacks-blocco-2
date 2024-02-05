@@ -13,7 +13,19 @@ insertButton.addEventListener("click",
 
 function(){
     
+    // Tramite ciclo while inserisco numeri in input
 
+    // Dichiato un array vuoto
+    const numbers = [];
+
+
+    // Dichiaro la variabile della somma che sarà anche
+    // la variabile contatore del while
+    let sumNumbers = 0;
+
+    while( sumNumbers < 50 ){
+        
+    }
 
 
 }
