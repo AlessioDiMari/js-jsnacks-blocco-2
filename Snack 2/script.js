@@ -12,4 +12,38 @@ Quando l'utente trova il numero, fateglielo sapere!
 const insertButton = document.getElementById("inserisci");
 
 // Salvo l'esito della sfida
-let result = document.getElementById("esito")
+let result = document.getElementById("esito");
+
+// Faccio la funzione al "click" del button 
+insertButton.addEventListener("click",
+
+    function(){
+
+        // Faccio generare un numero casuale al computer
+        const computerGuess = Math.floor(Math.random() * 100) + 1;
+
+        // Utilizzo due cicli "do while"
+        // uno per verificare che l'utente scriva un numero
+        // e un altro per verificare se ha indovinato il numero del computer
+
+        // Dichiaro la variabile del tentativo dell'utente
+
+        let userGuess;
+
+        do{
+            // Verifico se l'utente scriva un numero e 
+            // in caso lo avverto con un alert
+            userGuess = Number(prompt("Prova ad indovinare"));
+
+            if (isNaN(userGuess)){
+                alert("Inserisci un numero!")
+            }
+                    
+        } while (isNaN(userGuess));
+
+
+
+    }
+
+);
+
