@@ -25,16 +25,23 @@ function(){
     const firstLenght = Math.floor(Math.random() * 10) + 1;
     const secondLenght = Math.floor(Math.random() * 10) + 1;
 
+    
+    firstArray.length = firstLenght;
+    secondArray.length = secondLenght;
+    
+    console.log(firstArray.length);
+    console.log(secondArray.length);
+
     // Faccio riempire all'utente gli array con dei for
 
     // Primo array
-    for ( i = 0; i < firstLenght; i++){
+    for ( i = 0; i < firstArray.length ; i++){
         let elementFirst = prompt("Inserisci un elemento per il primo array");
         firstArray.push(elementFirst);
     }
 
     // Secondo array
-    for ( i = 0; i < secondLenght; i++){
+    for ( i = 0; i < secondArray.length ; i++){
         let elementSecond = prompt("Inserisci un elemento per il secondo array");
         secondArray.push(elementSecond);
     }
@@ -43,21 +50,33 @@ function(){
     // dei due array e faccio inserire all'utente gli elementi mancanti
     //  all'array più piccolo utilizzando un while
 
-    while ( firstLenght !== secondLenght ){
-
-        if ( firstLenght < secondLenght ){
-            let elementFirst = prompt("Inserisci un elemento per il primo array");
-            firstArray.push(elementFirst);
-        } else {
-            let elementSecond = prompt("Inserisci un elemento per il secondo array");
-            secondArray.push(elementSecond);
+    verifyBtn.addEventListener("click",
+    
+    function(){
+        while( firstArray.length !== secondArray.length ){
+        
+            if ( firstArray.length < secondArray.length ){
+                let elementFirst = prompt("Inserisci un altro elemento per il primo array");
+                firstArray.push(elementFirst);
+            } else {
+                let elementSecond = prompt("Inserisci un altro elemento per il secondo array");
+                secondArray.push(elementSecond);
+            }
+            
+            console.log(firstLenght);
+            console.log(secondLenght);
         }
 
+        // Dichiaro in pagina che gli array sono uguali
+        document.getElementById("esito").innerText = `I due array sono ora uguali`;
+        
+        
     }
-
-    // Dichiaro in pagina che gli array sono uguali
-
+    
+    )
+    
 }
 
 )
+
 
